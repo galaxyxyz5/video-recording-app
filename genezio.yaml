@@ -1,6 +1,6 @@
 frontend:
     path: .
-    publish: dist
+    publish: dist/client
     scripts:
         build:
             - npm run build
