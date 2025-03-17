@@ -1,0 +1,20 @@
+<div class="recorder-container">
+    <h2>Screen Recorder</h2>
+    <div class="controls">
+      <button 
+        (click)="startRecording()" 
+        [disabled]="isRecording"
+        class="record-btn">
+        Start Recording
+      </button>
+      <button 
+        (click)="stopRecording()" 
+        [disabled]="!isRecording"
+        class="stop-btn">
+        Stop Recording
+      </button>
+    </div>
+    <div class="status">
+      {{ isRecording ? 'Recording in progress...' : 'Ready to record' }}
+    </div>
+  </div>
