@@ -1,3 +1,6 @@
+name: video-recording-app
+region: us-east-1
+yamlVersion: 2
 frontend:
     path: .
     publish: dist/client
@@ -7,6 +10,3 @@ frontend:
         deploy:
             - npm install
     subdomain: video-recording-app
-name: video-recording-app
-region: us-east-1
-yamlVersion: 2
