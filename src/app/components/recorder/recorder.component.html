@@ -1,20 +1,18 @@
 <div class="recorder-container">
-    <h2>Screen Recorder</h2>
-    <div class="controls">
-      <button 
-        (click)="startRecording()" 
-        [disabled]="isRecording"
-        class="record-btn">
-        Start Recording
-      </button>
-      <button 
-        (click)="stopRecording()" 
-        [disabled]="!isRecording"
-        class="stop-btn">
-        Stop Recording
-      </button>
-    </div>
-    <div class="status">
-      {{ isRecording ? 'Recording in progress...' : 'Ready to record' }}
-    </div>
+  <h2>Screen Recorder</h2>
+  <div class="controls">
+    <button (click)="startScreenRecording()" [disabled]="isScreenRecording">Start Screen Recording</button>
+    <button (click)="stopScreenRecording()" [disabled]="!isScreenRecording">Stop Screen Recording</button>
   </div>
+
+  <h2>Camera Recorder</h2>
+  <div class="controls">
+    <button (click)="startCameraRecording()" [disabled]="isCameraRecording">Start Camera Recording</button>
+    <button (click)="stopCameraRecording()" [disabled]="!isCameraRecording">Stop Camera Recording</button>
+  </div>
+  
+  <div class="status">
+    {{ isScreenRecording ? 'Screen Recording in progress...' : 'Screen not recording' }}<br>
+    {{ isCameraRecording ? 'Camera Recording in progress...' : 'Camera not recording' }}
+  </div>
+</div>
