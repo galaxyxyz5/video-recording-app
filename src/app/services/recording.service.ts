@@ -12,13 +12,13 @@ export class RecordingService {
 
   constructor(private http: HttpClient) {}
 
-  uploadChunk(videoBlob: Blob, sessionId: string): Observable<any> {
+  uploadChunk(videoBlob: Blob, target: string, sessionId: string): Observable<any> {
     const formData = new FormData();
     formData.append('video', videoBlob, 'chunk.webm');
-    return this.http.post(`${this.apiUrl}/recordings/chunk/${sessionId}`, formData);
+    return this.http.post(`${this.apiUrl}/recordings/${target}/chunk/${sessionId}`, formData);
   }
 
-  finalizeRecording(sessionId: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/recordings/finalize`, { sessionId });
+  finalizeRecording(target: string, sessionId: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/recordings/${target}/finalize`, { sessionId });
   }
 }
