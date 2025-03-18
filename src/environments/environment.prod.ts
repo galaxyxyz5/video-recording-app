@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://fa5408c7-27d4-418f-906f-1546d6e28c78.us-east-1.cloud.genez.io/api',
+    apiUrl: 'https://f695e417-0d4c-4a21-8e53-40aada196baf.us-east-1.cloud.genez.io/api',
     recordingSettings: {
       chunkDuration: 5000, // 5 seconds in milliseconds
       mimeType: 'video/webm;codecs=vp8',
